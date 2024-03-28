@@ -1,3 +1,5 @@
+#este método retorna um resultado booleano que considera se o conjunto está ou não suplantado em outro, ex:
+
 conjunto_a = {1, 2, 3}
 conjunto_b = {4, 1, 2, 5, 6, 3}
 
