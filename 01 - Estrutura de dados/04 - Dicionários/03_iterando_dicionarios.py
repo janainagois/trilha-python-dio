@@ -10,5 +10,7 @@ for chave in contatos:
 
 print("=" * 100)
 
+#esta é a melhor forma de usar a estrutura  for, por ser mais legível, ex:
+
 for chave, valor in contatos.items():
     print(chave, valor)
