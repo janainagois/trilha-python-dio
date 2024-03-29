@@ -1,11 +1,15 @@
-def exibir_poema(data_extenso, *args, **kwargs):
-    texto = "\n".join(args)
-    meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in kwargs.items()])
+#a linguagem python reconhece *args como como um método que recebe valore como tupla.
+#a linguagem python reconhece **kwargs como como um método que recebe valore como dicionário.
+#nos dois casos eu posso mudar o nome do método mantendo os asteriscos para diferenciar um do outro, ex: *poema e **autoria.
+def exibir_poema(data_extenso, *poema, **autoria):
+    texto = "\n".join(poema)
+    meta_dados = "\n".join([f"{chave.title()}: {valor}" for chave, valor in autoria.items()])
     mensagem = f"{data_extenso}\n\n{texto}\n\n{meta_dados}"
     print(mensagem)
 
 
 exibir_poema(
+    "Sexta-feira, 29 de março de 2024",
     "Zen of Python",
     "Beautiful is better than ugly.",
     "Explicit is better than implicit.",
